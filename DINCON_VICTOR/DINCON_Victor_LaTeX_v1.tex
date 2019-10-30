@@ -1,0 +1,209 @@
+\documentclass[a4,11pt]{reportN}
+
+\usepackage[brazil]{babel}      % para texto em Português
+%\usepackage[english]{babel}    % para texto em Inglês
+
+\usepackage[latin1]{inputenc}   % para acentuação em Português
+%\input{P-margin.inf}
+
+\usepackage{graphics}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[centertags]{amsmath}
+\usepackage{graphicx,indentfirst,amsmath,amsfonts,amssymb,amsthm,newlfont}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{url}
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{color}
+
+
+
+
+\begin{document}
+
+%********************************************************
+\title{Análise de Robustez e Implementação da Codificação 8b/10b}
+%Este trabalho foi apresentado no evento X, na cidade Y no
+%ano Z.}}
+
+
+\author
+    { \Large{Victor Afonso dos Reis}\thanks{victor.afonsoreis35@gmail.com} \\
+ {\small Faculdade de Engenharia de Ilha Solteira, UNESP, Ilha Solteira, SP,\\
+ Departamento de Engenharia Elétrica, Unesp, Ilha Solteira, SP}\\
+  \Large{Lucas Arruda Ramalho}\thanks{lucasarrudaramalho@gmail.com} \\
+     {\small Faculdade de Engenharia de Ilha Solteira, UNESP, Ilha Solteira, SP,\\
+     	Departamento de Engenharia Elétrica, Unesp, Ilha Solteira, SP}\\
+   \Large{Ailton Akira Shinoda}\thanks {shinoda@dee.feis.unesp.br} \\
+ {\small Faculdade de Engenharia de Ilha Solteira, UNESP, Ilha Solteira, SP,\\
+ 	Departamento de Engenharia Elétrica, Unesp, Ilha Solteira, SP} }
+
+\criartitulo
+
+%\markboth{\hfill Write the title of your work here, concisely if
+%necessary \hfill Write the last authors' name here} {Proceeding Series of the Brazilian
+%Society of Computational and Applied Mathematics \hfill}
+
+\begin{abstract}
+{\bf Resumo}. Em comunicações de altas frequências, onde a confiabilidade é relevante, recomenda-se a codificação 8b/10b. Neste tipo de transmissão, pode ocorrer uma série de problemas. Um problema de extrema relevância em comunicações digitais é o sincronismo entre transmissor e receptor, que pode ser prejudicado por uma longa sequência de níveis lógicos, zeros (0's) ou um (1's), no canal de transmissão. Neste projeto modela-se e implementa-se um sistema da codificação 8b/10b, que soluciona o desbalanceamento de bits, no kit de desenvolvimento em FPGA da Xilinx(Kintex 7), através da linguagem de descrição de hardware VHDL pelo software Vivado\textsuperscript{TM}. Pela implementação obteve-se um sistema genérico para o teste de codificações descritas em VHDL, além de parâmetros de frequência, taxa de dados e características do funcionamento da transmissão usando o sistema da codificação 8b/10b.
+
+\noindent
+{\bf Palavras-chave}. VHDL, FPGA, Codificação 8b/10b, Transmissões, Implementação.
+
+\end{abstract}
+
+\section{Introdução}
+
+A complexidade dos sistemas de comunicação e as suas velocidades evoluíram ao longo do tempo, porém um modelo elementar é ilustrado na Figura \ref{comunicacao}. Em qualquer meio de transmissão, os dados transmitidos podem sofrer distorções ou interferências causadas por problemas no canal de transmissão \cite{Borges}. 
+
+\begin{figure}[h!]
+	\centering
+	\epsfig{file=model_communication_system.eps, height=4cm, width=12cm}
+	\caption{ {\small Modelo de um Sistema de Comunicação Elementar.}}
+	\label{comunicacao}
+\end{figure}
+
+Diversos recursos tecnológicos trocam dados em pequenas ou longas distâncias nos dias atuais. Uma alta confiabilidade  é garantido obtendo no lado do receptor os mesmos ou a maioria dos dados enviados pelo transmissor . Esta preocupação ocorre devido à problemas comuns em qualquer meio de transmissão, como por exemplo: a atenuação do sinal, dessincronização entre o transmissor e receptor além de ruídos apresentados no canal de transmissão \cite{Shannon}. Em altas frequências os problemas tornam-se mais evidentes, principalmente a dessincronização entre o transmissor/receptor e a aparição de dados ruidosos sendo um dos fatores limitantes na velocidade dos sistemas \cite{pra}. 
+
+Através de estudos surgiram comunicações mais confiáveis e com um custo menor. Estes estudos geraram teorias e circuitos que realizam codificações para a transmissão de dados. Estas codificações representam uma conversão de dados digital/digital e estão separadas em três grandes técnicas: codificação de linha, codificação em blocos e \textit{scrambling}. Neste trabalho é de maior importância a codificação em blocos pois transforma um bloco com determinado número "m" de bits em outro bloco com "n" número de bits, sendo "n" maior que "m" \cite{Fourozan}. 
+
+Esta redundância na codificação em blocos é feita de forma lógica, dessa forma pode-se detectar erros na transmissão. O uso da codificação de blocos aumenta a qualidade do sistema de transmissão, apesar de diminuir a taxa efetiva de dados no sistema \cite{Berlekamp}. A codificação em blocos realiza um balanço DC no dado, portanto permite facilitar a sincronização entre o emissor e receptor por meio de circuitos externos. Codificações como por exemplo a 4b/5b , a 6b/8b, a 8b/10b, a 64b/66b e a 128b/130b utilizam esse método\cite{Fourozan1}.
+
+Em sistemas de comunicação há a problemática da escolha da melhor codificação para a aplicação alvo. Algumas codificações fornecem mais confiabilidade na transmissão do que outras para o mesmo sistema. Dessa maneira ao implementar uma codificação testa-se a mesma para obter a melhora do sistema de comunicação. Em caso de erros de transmissão no canal, a decodificação da mensagem pode ou não detectar os dados como errôneos. Logo, a robustez da codificação é avaliada considerando a capacidade de distinguir com êxito os dados corretos e incorretos da transmissão.Para sistema de comunicação de altas velocidades é recomendada a utilização da codificação 8b/10b, independente do meio de transmissão \cite{Franaszek}. Sendo assim, o objetivo deste trabalho é o estudo da robustez desta codificação 8b/10b obtendo a taxa de erro apresentada no lado do receptor. Esta análise refere-se à um estudo realizado por meio do MATLAB\textsuperscript{TM}, implementando a codificação em software e testando a taxa de erros por meio de recursos do SIMULINK.
+
+Para o teste da codificação 8b/10b em ambiente real, deve-se implementá-la em hardwares e realizar transmissões entre um transmissor e um receptor.  Por isso, a codificação 8b/10b foi descrita em linguagem de descrição de hardware VHDL e implementada no FPGA através do kit da Xilinx (kintex 7 KC705 Evaluation Kit). 
+
+Pela análise parcial do estudo feito no MATLAB\textsuperscript{TM} (SIMULINK) obteve-se uma alta taxa de detecção de erros na transmissão quando comparada com a taxa de erros total. A seção 2 ressalta a teoria da codificação 8b/10b. A seção 3 apresenta a simulação no software MATLAB\textsuperscript{TM} (SIMULINK) do estudo da robustez da codificação 8b/10b. A seção 4 descreve o sistema da codificação 8b/10b, implementada na linguagem de descrição de hardware VHDL. A seção 5 conclui os resultados do estudo e da implementação da codificação em VHDL.
+
+\section{Codificação 8b/10b}
+
+A codificação foi descrita para se adequar à locais com transmissões em alta velocidades, promovendo sistemas de baixo custo e com transmissões confiáveis. Pela descrição, a codificação promove um balanceamento DC no sinal, ou seja, o dado a ser transmitido não possui níveis lógicos altos ou baixos por muito tempo. Esse balanço torna-se importante para a recuperação do relógio e consequentemente sincronização entre o emissor e o receptor.
+
+Os dados de 8 bits são codificados em 10 bits de forma que possua o maior número de transições possíveis. Neste mapeamento, nota-se que alguns dados de 10 bits não possuem equivalentes em dados de 8 bits. Dessa maneira, usa-se alguns dados de 10 bits com o mesmo número de bits 1's e 0's como dados de controle da transmissão \cite{Semiconductor}.
+
+Na codificação é descrito o conceito de disparidade, apresentando dois tipos: a disparidade do sistema, ou do inglês \textit{Running Disparity} (RD), e a disparidade dos dados. A codificação é descrita de forma que os dados transformados em 10 bits só possuam disparidade de dados de +2, -2 ou 0 (nula). Desta maneira, a disparidade dos dados é obtida no momento em que se codifica o dado de entrada para 10 bits. A disparidade do sistema, ou RD, é obtida seguindo regras de acordo com a disparidade dos dados e também é responsável pela escolha dos dados no momento da codificação \cite{Franaszek}.
+
+O RD alterna-se entre +1 e -1 ou permanece o mesmo, de acordo com as regras ilustradas na Figura \ref{rd}. Se  o RD é -1 e a disparidade dos dados de 10 bits for +2, o RD troca para +1. Caso o RD for +1 e a disparidade dos dados de 10 bits for -2, logo o RD troca para -1. Qualquer outra situação não pertencente a esses casos o RD permanece o mesmo. 
+
+\begin{figure}[h!]
+	\centering
+	\epsfig{file=esquema_rd.eps, height=4cm, width=13cm}
+	\caption{ {\small Máquina de estados para a transição do RD.}}
+	\label{rd}
+\end{figure}
+
+A característica da disparidade de dados na transmissão, possuindo um número definido da diferença de bits 1's e 0's,  possibilita a detecção de erro pelo receptor e uma possível recuperação do dado por meio de circuitos adicionais. Como descrito, para codificar os dados usa-se o RD que sempre será -1 quando o sistema for inicializado. \cite{Semiconductor}. 
+
+A codificação dos dados é feita separando os dados de 8 bits em duas partes. Um esquema dessa separação da codificação pode ser visualizado na Figura \ref{coding}.  
+
+\begin{figure}[h!]
+	\centering
+	\epsfig{file=coding.eps, height=5cm, width=8cm}
+	\caption{ {\small Esquema da separação para codificação 8b/10b..}}
+	\label{coding}
+\end{figure}
+
+ Pela Figura \ref{coding} observa-se que o dado de entrada da codificação é dividido em dois blocos. O primeiro bloco, que possui 3 bits mais significativo dos dados de entrada, ao passar pelo \textit{encoder} se torna um bloco de 4 bits menos significativos da saída. O segundo bloco de entrada, que possui 5 bits menos significativos, se torna um bloco de 6 bits mais significativos na saída do \textit{encoder}. Totalizando um dado de saída de 10 bits, pela junção das partes mais significativa e menos significativa codificadas.
+
+
+\section{Descrição e Modelagem em Máquinas de Estado em VHDL do Sistema da Codificação 8b/10b}
+
+O estudo da robustez da codificação 8b/10b foi realizado em \cite{Reis}, o qual possui um sistema da codificação 8b10b descrito no MATLAB\textsuperscript{TM} (SIMULINK) e um gráfico comparativo entre a taxa de erro total e a taxa de erro identificada. A modelagem da codificação 8b/10b pode ser feita por meio de máquinas de estados no VHDL. Pela máquina de estados é possível representar o comportamento de um circuito ou programa graficamente. Os diagramas de estados são métodos gráficos que ilustra um sistema em máquinas de estado, estando presente apenas seus estados e a ação que provocou as transições.
+
+O funcionamento da codificação 8b/10b, descrita em VHDL através de máquinas de estados, é ilustrado na figura \ref{machine_system}. Como pode-se analisar há a presença de sete estados no sistema do \textit{encoder} e no \textit{decoder}. No \textit{encoder} o estado "ENC\_A" refere-se ao estado de espera do dado de 8 bits de entrada. O estado "ENC\_B" diz a respeito da codificação dos 3 bits mais significativos. Já o estado "ENC\_C" trata a codificação da parte menos significativa do dado de entrada (5 bits). No estado "ENC\_D" é realizado a junção das partes codificadas, formando a saída do dado de 10 bits. Além disso nesse estado é realizado o cálculo do novo RD do sistema. No estágio "ENC\_E" o RD da palavra é contabilizado e no próximo estágio "ENC\_F" o valor da saída é atualizado. No estágio "ENC\_G" é atualizado o RD do sistema e retorna ao estado de espera "ENC\_A" para receber o novo dado de entrada. Caso em algum momento, ou qualquer estágio, for inserido um sinal de \textit{reset} no sistema, passa-se para  o estágio "ENC\_F" que reinicializa as saídas e zera as entradas passando para o estágio "ENC\_A" novamente. 
+
+A máquina de estado do \textit{decoder} apresenta comportamento similar, apesar de inverso, com o objetivo de decodificar os blocos do dado codificado. Assim a mesma é capaz de fornecer o dado de 8 bits decodificado e caso no estado "DEC\_D" identifique que houve erro, vai para os estados "DEC\_H", "DEC\_I" e "DEC\_J". Nestes estados a saída vai para alta impedância e um sinal de erro vai para nível lógico alto. Após o estado "DEC\_J" o sistema volta para o estado de espera "DEC\_A" para receber um novo dado de 10 bits.
+
+\begin{figure}[h!]
+	\centering
+	\epsfig{file=FSM8b10b_left.eps, height=5cm, width=15cm}
+	\caption{ {\small Máquina de estados do sistema implementado a codificação 8b/10b em VHDL.}}
+	\label{machine_system}
+\end{figure}
+
+A modelagem da máquina de estados foi descrita no software Vivado\textsuperscript{TM} na linguagem VHDL, assim como o sistema para sua implementação no FPGA. Desta forma, além da descrição do \textit{encoder} e \textit{decoder}, há a necessidade de descrever todos os sistemas periféricos necessários para o funcionamento da codificação. O \textit{encoder} junto com o \textit{decoder} e os demais periféricos são interligados, descritos e referenciados dentro de um arquivo denominado \textit{Top File}. A descrição do sistema para implementação no FPGA é ilustrado na figura \ref{implementation}.
+
+\begin{figure}[h!]
+	\centering
+	\epsfig{file=hardware_system.eps, height=5cm, width=14.5cm}
+	\caption{ {\small Descrição do Top File da codificação 8b/10b para implementação no FPGA.}}
+	\label{implementation}
+\end{figure}
+
+Pela figura \ref{implementation} observa-se para o funcionamento do sistema deve-se descrever um \textit{Phase-locked Loop} (PLL), um \textit{Virtual Input Output} (VIO), um \textit{Integrated Logical Analiser} (ILA), um contador para inserir dado no \textit{encoder}, um sistema para inserir o erro no sistema descrito pelos componentes VIO/Pipeline e um arranjo para modificar o dado de saída do \textit{encoder} o qual irá entrar no \textit{decoder}.
+
+Através do PLL pode-se inserir qualquer valor de clock que o FPGA suporte implementar. O VIO permite que o usuário set sinais dentro do sistema, como por exemplo o \textit{reset} e o sinal de erro. Como a ação do usuário é muito mais lenta do que o \textit{clock} do sistema, introduz-se um sistema de pipeline para setar o sinal de erro em um ciclo de \textit{clock}. O sistema \textit{Error Generator} gera um vetor de 10 bits, com apenas um bit em nível lógico alto, rotacionando-os quando o sinal de dados disponíveis na saída do \textit{encoder}  (\textit{ready\_enc}) for alto. O bloco seletor é responsável por realizar uma operação XOR com o dado de 10 bits do \textit{Error Generator} e o dado de saída do \textit{encoder}, quando o sinal "error\_reg(2)" for alto. Caso contrário o bloco seletor deixa passar o dado de saída do \textit{encoder} puro, ou seja, sem passar pela operação XOR. Pelo ILA é possível visualizar os sinais dentro do sistema, dessa forma todos os dados marcados em vermelho na figura \ref{implementation} são inseridos no ILA para obter suas formas de onda.
+
+\section{Implementação e Simulação no Kit FPGA da Xilinx (Kintex 7)}
+
+A implementação do sistema foi realizada em um kit de desenvolvimento da Xilinx (Kintex 7), através do software Vivado\textsuperscript{TM} o qual gerou toda síntese, implementação(roteamento, análise de \textit{timing}, etc) e programação do FPGA. A frequência de \textit{clock} definida no teste do sistema após a implementação foi de 300 MHz, não sendo a frequência de operação máxima do sistema. Portanto, pode-se enfatizar que o sistema nessa faixa de frequência opera a uma taxa de dados em torno de 2,4 Gb/s. O ILA e VIO dificultam na determinação da frequência máxima, pois ao se elevar a taxa de \textit{clock} estes sistemas não suportaram. É impossível retirar o VIO pois este é necessário para iniciar a codificação. Dessa forma, foi retirado o ILA e a máxima frequência obtida foi de 400MHz, ou seja, uma taxa de dados transmitidos de 3,2 Gb/s.
+
+Simulando o sistema no FPGA observou-se que a latência de codificação, ou seja, os ciclos de \textit{clock} até o dado de entrada estar devidamente disponível na saída é de 5 ciclos. Para a decodificação, esta latência é de 4 ciclos de \textit{clock} o qual totaliza 9 ciclos para codificação e decodificação. Porém, o sistema para inserir erro na transmissão utiliza 2 ciclos de \textit{clock} gerando um total de 11 ciclos de \textit{clock} para o dado codificado estar devidamente decodificado na saída.
+
+Na figura \ref{errodetected} é ilustrado a simulação do sistema no kit FPGA da Xilinx. O sinal \textit{Error Input} é gerado e permanece em nível lógico alto até que o dado entre no \textit{decoder}. Portanto gerou-se um erro no dado e 4 ciclos de \textit{clock} depois é gerado um sinal de erro. O RD entre \textit{encoder} e o \textit{decoder} entra em descompasso e só se recupera após 33 ciclos de \textit{clock}, ou seja, perdeu-se 3 palavras na transmissão. Este descompasso do RD entre o \textit{encoder} e \textit{decoder} é característico da codificação. Após alguns testes obteve-se um descompasso máximo de 88 ciclos, ou seja, 8 palavras perdidas na transmissão.
+
+\begin{figure}[h!]
+	\centering
+	\epsfig{file=error_identified.eps, height=5cm, width=14.5cm}
+	\caption{ {\small Simulação da codificação 8b/10b implementada no FPGA com erros inseridos no canal.}}
+	\label{errodetected}
+\end{figure}
+
+A latência mínima obtida entre gerar o erro no dado e a identificação de erros pelo \textit{decoder} é de 4 ciclos de \textit{clock}. Porém, pelos testes realizados foi possível inserir um erro em que o dado era decodificado erroneamente e só depois de algumas palavras o erro era identificado. Isto acontece pelo fato de embora o \textit{encoder} e o \textit{decoder} desbalancear o RD, alguns dados são possuem a mesma sequência de bits para qualquer um dos RD's. Dessa forma, pelos testes a latência máxima para encontrar o erro na transmissão foi de 53 ciclos de \textit{clock}. Na figura \ref{erronotdetected} é ilustrado um caso em que o erro não foi detectado e só posteriormente, pelo desbalanço do RD entre os dois sistemas, foi gerado um sinal de erro. 
+
+\begin{figure}[h!]
+	\centering
+	\epsfig{file=error_notidentified.eps, height=5cm, width=14.5cm}
+	\caption{ {\small Simulação do sistema da codificação 8b/10b com erro não identificado.}}
+	\label{erronotdetected}
+\end{figure}
+
+Pela figura \ref{erronotdetected} observa-se que o dado em hexadecimal "46" foi inserido e posteriormente saiu o dado também em hexa "56". No ciclo 75 é inserido o dado em hexadecimal "45" e posteriormente sai o mesmo dado, dessa forma mesmo com o sistema com o RD em desbalanço o dado foi decodificado certo. Só alguns ciclos de \textit{clock} posteriores foi gerado um erro por conta do desbalanço dos RD's.
+
+\section{Conclusão}
+
+A utilização de sistema codificadores para comunicação de alta velocidade é vital para sincronismos entre transmissão e recepção, bem como verificação de erros no canal. Existem diversas técnicas que efetuam essa tarefa de codificação. A escolha entre elas é realizada analisando o custo benefício entre robustez, confiabilidade, ocupação de taxa de dados e largura de banda, e qualidade do canal utilizado.
+
+Este artigo efetuou uma implementação da codificação 8b/10b em um kit de desenvolvimento em FPGA da Xilinx (Kintex 7). Os resultados mostram que a codificação pode apresentar falha ao detectar erros, por conta do desbalanço do RD entre o \textit{encoder} e \textit{decoder}. Entretanto, o sistema da codificação 8b/10b implementada no kit possui uma latência máxima de codificação e decodificação de 11 ciclos de \textit{clock}. A máxima frequência de \textit{clock} obtida  foi de 400 MHz, com uma taxa de transferência de 3,2 Gb/s.
+
+O sistema descrito e implementado no FPGA para a codificação 8b/10b, pode ser utilizado como base para a implementação e simulação no FPGA de outras codificações.   Logo este trabalho também descreve a modelagem realizada em máquinas de estado para a descrição do sistema com encoder e decoder da codificação 8b/10b em linguagem de descrição de hardware VHDL. Pretende-se em trabalhos futuros, descrever um sistema que realize a análise estatística dos dados, obtendo a robustez do sistema implementado no FPGA.
+
+
+\section*{Agradecimentos}
+Os autores agradecem à FUNDUNESP e ao laboratório SPRACE pelo apoio técnico e financeiro obtido ao longo deste trabalho.
+ 
+\begin{thebibliography}{99}
+
+\bibitem[1]{Borges}
+F. Borges, Transmissão de Dados, Carnaxide: Schneider Electric, 2008. Disponível em: \url{http://www.schneiderelectric.pt/documents/product-services/training/transmissao_dados.pdf}. Acesso em: 1 ago. 2017.
+
+\bibitem[2]{Shannon}
+C. E. Shannon, "Communication In The Presence Of Noise," in Proceedings of the IEEE, vol. 86, no. 2, pp. 447-457, Feb. (1998).
+DOI: 10.1109/JPROC.1998.659497
+
+\bibitem[3]{pra}
+T. D. PRA, Medidor de Taxa de Erro de Bit para Fibra Óptica. 2012. 76 f. TCC (Graduação) - Curso de Engenharia Elétrica, Engenharia Elétrica, Universidade Federal do Rio Grande do Sul, Porto Alegre, (2012). Disponível em: \url{https://www.lume.ufrgs.br/bitstream/handle/10183/65425/000858235.pdf?sequence=1}. Acesso em: 1 ago. 2017.
+
+\bibitem[4]{Fourozan}
+B. A. FOROUZAN, "Digital Transmission", In: B. A. FOUROUZAN, "Data Communications and Networking", 4. ed, New York: Mcgraw-hill Education, (2007). Cap. 4. p. 101-118. 
+
+\bibitem[5]{Berlekamp}
+E. Berlekamp, R. Peile and S. Pope, "The application of error control to communications", in IEEE Communications Magazine, vol. 25, no. 4, pp. 44-57, April (1987). DOI: 10.1109/MCOM.1987.1093590.
+
+\bibitem[6]{Fourozan1}
+B. A. FOROUZAN, "Digital Transmission", In: B. A. FOUROUZAN, "Data Communications and Networking", 4. ed, New York: Mcgraw-hill Education, (2007). Cap. 10. p. 267-306. 
+
+\bibitem[7]{Franaszek}
+A. X. Widmer and P. A. Franaszek, "A DC-Balanced, Partitioned-Block, 8B/10B Transmission Code," in IBM Journal of Research and Development, vol. 27, no. 5, pp. 440-451, Sept. 1983. DOI: 10.1147/rd.275.0440
+
+\bibitem[8]{Semiconductor}
+L. SEMICONDUCTOR. 8B/10B ENCODER/DECODER. Hillsboro: Lattice Semiconductor, (2015).
+
+\bibitem[9]{Reis}
+V. A. REIS, L. A. RAMALHO, A. A. SHINODA, "Análise de Robustez e Modelagem em Máquina de Estado da Codificação 8b/10b" In: ENCONTRO REGIONAL DE MATEMÁTICA APLICADA E COMPUTACIONAL, "Caderno de Trabalhos Completos e Resumos", Bauru, (2017). p. 48 - 55. Disponível em: \url{http://www.fc.unesp.br/Home/Departamentos/Matematica/ermac/caderno-ermac_2017.pdf}. Acesso em: 9 ago. 2017.
+
+\end{thebibliography}
+\end{document}

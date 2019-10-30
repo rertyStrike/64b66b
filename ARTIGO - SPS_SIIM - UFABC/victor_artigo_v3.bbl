@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{Borges}
+F.~Borges, ``Transmissão de dados,'' Tech. Rep.~3, Schneider Electric, 2008.
+\newblock Disponível em:
+  \url{http://www.schneiderelectric.pt/documents/product-services/training/transmissao_dados.pdf}.
+  Acesso em: 3 ago. 2017.
+
+\bibitem{pra}
+T.~D. Pra, ``Medidor de taxa de erro de bit para fibra Óptica,'' Master's
+  thesis, Universidade Federal do Rio Grande do Sul, 2012.
+\newblock Disponível em:
+  \url{https://www.lume.ufrgs.br/bitstream/handle/10183/65425/000858235.pdf?sequence=1}.
+  Acesso em: 1 ago. 2017.
+
+\bibitem{Fourouzan}
+B.~A. Forouzan, {\em Data Communications and Networking}.
+\newblock McGraw-Hill, 4~ed., 2007.
+
+\bibitem{Berlekamp}
+E.~Berlekamp, R.~Peile, and S.~Pope, ``The application of error control to
+  communications,'' {\em IEEE Communications Magazine}, vol.~25, pp.~44--57,
+  April 1987.
+
+\bibitem{Franaszek}
+A.~X. Widmer and P.~A. Franaszek, ``A dc-balanced, partitioned-block, 8b/10b
+  transmission code,'' {\em IBM Journal of Research and Development}, vol.~27,
+  pp.~440--451, Sept 1983.
+
+\end{thebibliography}

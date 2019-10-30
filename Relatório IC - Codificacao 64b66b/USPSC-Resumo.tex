@@ -1,0 +1,24 @@
+%% Resumo.tex
+% ---
+% Resumo
+% ---
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo		
+\begin{resumo}
+	\begin{flushleft} 
+			\setlength{\absparsep}{0pt} % ajusta o espaçamento da referência	
+			\SingleSpacing 
+			\imprimirautorabr~ ~\textbf{\imprimirtitulo}.	\imprimirdata. \pageref{LastPage}p. 
+			%Substitua p. por f. quando utilizar oneside em \documentclass
+			%\pageref{LastPage}f.
+			\imprimirtipotrabalho~-~\imprimirinstituicao, \imprimirlocal, \imprimirdata. 
+ 	\end{flushleft}
+\OnehalfSpacing 		
+	
+Em sistemas de alta velocidade, onde o maior número de dados deve ser transmitido em um curto espaço de tempo, a codificação 64b66b pode ser implementada no canal de transmissão.
+ 
+Para uma sequência digital gerada e transmitida em alta velocidade, pode ocorrer uma série de problemas na transmissão do dado. Estes problemas são caracterizados por ruídos devido a radiações, interferências eletromagnéticas, ionizações indesejáveis e uma dessincronização entre o transmissor e receptor dada por uma longa sequência de zeros (0’s) ou um (1’s) no canal de transmissão. Esta longa sequência interfere nos circuitos adicionais presentes no canal de realizarem a sincronização, sendo necessário realizar um balanço nos bits (1’s) e nos bits (0’s) transmitidos. Neste projeto é realizado um estudo da codificação 64b66b através de um sistema que implementa um modelo da codificação, para transmissão somente de dados, no software Matlab\textsuperscript{TM} dentro do ambiente Simulink. Adicionalmente, dentro da codificação implementou-se um \textit{Cyclic Redundancy Checking (CRC)} de 8 bits para a detecção de erros nos dados transmitidos.
+ 
+Com a implementação dos sistemas é possível realizar um balanceamento dos dados e a detecção de erros no canal de transmissão. Com o balanceamento dos dados possibilita a recuperação do \textit{clock}, sincronizando o dispositivo transmissor e receptor, ao mesmo tempo possibilita um canal de transmissão mais confiável por conta da detecção dos erros.
+
+ \textbf{Palavras-chave}: \textit{High Speed Serial Link}. Codificação 64b/66b. Transmissões.Matlab\textsuperscript{TM}. Simulink.
+\end{resumo}

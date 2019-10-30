@@ -1,0 +1,30 @@
+\select@language {brazil}
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Esquema do grande colisor de H\IeC {\'a}drons (LHC).}}{8}{figure.1.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Esquema de um registrador de deslocamento (\textit {shift register}).}}{14}{figure.3.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Tipos de sistemas \textit {Linear Feedback Shift Registers}.}}{15}{figure.3.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Tabela de polin\IeC {\^o}mios com m\IeC {\'a}ximo comprimento para circuitos LFSR (\textit {shift register}).}}{16}{figure.3.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Esquema de um registrador de deslocamento (\textit {shift register}).}}{17}{figure.3.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Esquema de um sistema (\textit {Fibonacci Linear Feedback Shift Register}).}}{17}{figure.3.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Esquema de um sistema (\textit {Galois Linear Feedback Shift Register}).}}{18}{figure.3.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Esquema simplificado de um sistema (\textit {Galois Linear Feedback Shift Register}).}}{18}{figure.3.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Esquema de um \textit {Scramblers} Aditivo.}}{21}{figure.4.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Esquema de um \textit {Scramblers} Multiplicativo.}}{22}{figure.4.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Exemplo gen\IeC {\'e}rico de um sistema CRC.}}{24}{figure.5.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Procedimento da codifica\IeC {\c c}\IeC {\~a}o para o sistema CRC.}}{26}{figure.5.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Formato dos blocos da codifica\IeC {\c c}\IeC {\~a}o 64b/66b}}{30}{figure.6.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Tabela dos c\IeC {\'o}digos de controle da codifica\IeC {\c c}\IeC {\~a}o 64b/66b.}}{32}{figure.6.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Esquema do \textit {scrambler} e do \textit {descrambler} descrito no padr\IeC {\~a}o IEEE 802.3ae.}}{35}{figure.6.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Possibilidades de carregamento de erros no Descrambler.}}{36}{figure.6.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Esquem\IeC {\'a}tico do CRC-8 Bits implementado na codifica\IeC {\c c}\IeC {\~a}o 64b/66b.}}{37}{figure.6.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Esquema do sistema implementado da codifica\IeC {\c c}\IeC {\~a}o 64b66b.}}{38}{figure.7.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Sistema da codifica\IeC {\c c}\IeC {\~a}o 64b66b implementado no Matlab\textsuperscript {TM}(SIMULINK).}}{39}{figure.7.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Estrutura Interna do bloco Aleatory Counter.}}{40}{figure.7.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Estrutura interna do subsistema \textit {Set Error}.}}{41}{figure.7.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Programa\IeC {\c c}\IeC {\~a}o interna do subsistema \textit {Matlab\textsuperscript {TM} Function}.}}{41}{figure.7.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Estrutura interna do Encoder 64b to 66b.}}{42}{figure.7.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Estrutura interna do \textit {Decoder} 66b to 64b.}}{42}{figure.7.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Estrutura interna do subsistema \textit {Display Error}.}}{43}{figure.7.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Simula\IeC {\c c}\IeC {\~a}o do sistema implementado da codifica\IeC {\c c}\IeC {\~a}o 64b66b.}}{45}{figure.8.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Gr\IeC {\'a}fico do comportamento da codifica\IeC {\c c}\IeC {\~a}o 64b66b em rela\IeC {\c c}\IeC {\~a}o aos erros.}}{47}{figure.8.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Comportamento do sistema da codifica\IeC {\c c}\IeC {\~a}o 64b66b com a probabilidade de erros de at\IeC {\'e} 20\%.}}{48}{figure.8.28}

@@ -1,0 +1,150 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Abinaya e Prakasam 2014]{Abinaya2014}
+\abntrefinfo{Abinaya e Prakasam}{ABINAYA; PRAKASAM}{2014}
+{ABINAYA, N.~S.; PRAKASAM, P. Performance analysis of maximum length lfsr and
+  bbs method for cryptographic application. In:  \textbf{2014 International
+  Conference on Electronics and Communication Systems (ICECS)}. [S.l.: s.n.],
+  2014. p.~1--5.}
+
+\bibitem[BRÜNING 2018]{Lucio2018}
+\abntrefinfo{BRÜNING}{BRÜNING}{2018}
+{BRÜNING, L.~R. \textbf{HIGH LUMINOSITY LARGE HADRON COLLIDER A DESCRIPTION
+  FOR THE EUROPEAN STRATEGY PREPARATORY GROUP}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://cds.cern.ch/record/1471000/files/CERN-ATS-2012-236.pdf}. Acesso
+  em: 20 jan. 2018.}
+
+\bibitem[Collaboration 2018]{Cms2018}
+\abntrefinfo{Collaboration}{COLLABORATION}{2018}
+{COLLABORATION, C. \textbf{Techninal Proposal for the Phase-II Upgrade of the
+  Compact Muon Solenoid}. 2018.
+Dispon{\'\i}vel em:
+  \url{http://www.desy.de/~garutti/LECTURES/ParticleDetectorSS12/JournalClub/lhc-CMS.pdf}.
+  Acesso em: 20 jan. 2018.}
+
+\bibitem[COMER 2016]{Comer2016}
+\abntrefinfo{COMER}{COMER}{2016}
+{COMER, D.~E. \textbf{Redes de Computadores e Internet}. São Paulo: Bookman,
+  2016. 557~p.}
+
+\bibitem[Dhingra 2018]{Sachin2018}
+\abntrefinfo{Dhingra}{DHINGRA}{2018}
+{DHINGRA, S. \textbf{Comparison of LFSR and CA for BIST}. Auburn: Dept. of
+  Electrical and Computer Engineering, 2018. 47~p.
+Dispon{\'\i}vel em:
+  \url{http://www.eng.auburn.edu/~agrawvd/COURSE/E7250\_05/REPORTS\_TERM/Dhingra\_LFSR.pdf}.
+  Acesso em: 18 jan. 2018.}
+
+\bibitem[Farrell e Moreira 2006]{Farrel2006}
+\abntrefinfo{Farrell e Moreira}{FARRELL; MOREIRA}{2006}
+{FARRELL, J.~C.; MOREIRA, P.~G. \textbf{Essentials of Error-Control Conding}.
+  Upper Saddle River: John Wiley \& Sons, 2006.}
+
+\bibitem[FERREIRA 2009]{Ferreira2009}
+\abntrefinfo{FERREIRA}{FERREIRA}{2009}
+{FERREIRA, B.~C.
+\textbf{DETECÇÃO DE RAIOS CÓSMICOS COM CALORIMETRIA DE ALTAS ENERGIAS}.
+2009. 118~p. Disserta\c{c}\~{a}o (Mestrado em Engenharia Elétrica) ---
+  UNIVERSIDADE FEDERAL do Rio de Janeiro, Rio de Janeiro, 2009.}
+
+\bibitem[Floyd 2009]{Floyd2002}
+\abntrefinfo{Floyd}{FLOYD}{2009}
+{FLOYD, T.~L. \textbf{Digital Fundamentals}. New Delhi: Pearson, 2009. 497~p.}
+
+\bibitem[Hassan 2018]{Ghassan2018}
+\abntrefinfo{Hassan}{HASSAN}{2018}
+{HASSAN, G.~M. \textbf{Scramble Image Based on LFBSR (Linear Feedback Shift
+  Registers)}. Baghdad: Dept. of Electrical and Computer Engineering, 2018.
+  14~p.
+Dispon{\'\i}vel em: \url{https://www.iasj.net/iasj?func=fulltext&aId=58271}.
+  Acesso em: 20 jan. 2018.}
+
+\bibitem[ISO/IEC/IEEE International Standard for Ethernet 2014]{IEEstandard}
+\abntrefinfo{ISO/IEC/IEEE\ldots}{ISO/IEC/IEEE\ldots}{2014}
+{ISO/IEC/IEEE International Standard for Ethernet.
+\textbf{ISO/IEC/IEEE 8802-3:2014(E)}, p. 1--3754, April 2014.}
+
+\bibitem[Kerl 2004]{John2004}
+\abntrefinfo{Kerl}{KERL}{2004}
+{KERL, J. \textbf{Computation in finite fields}. [s.n.], 2004. Dispon{\'\i}vel
+  em: \url{http://johnkerl.org/doc/ffcomp.pdf}. Acesso em: 08 janeiro 2018.}
+
+\bibitem[Koopman 2018]{CRCTable2018}
+\abntrefinfo{Koopman}{KOOPMAN}{2018a}
+{KOOPMAN, P. \textbf{Best CRC Polynomials}. Carnegie Mellon University, 2018.
+Dispon{\'\i}vel em: \url{http://users.ece.cmu.edu/~koopman/crc/index.html}.
+  Acesso em: 20 jan. 2018.}
+
+\bibitem[Koopman 2018]{Philip2018}
+\abntrefinfo{Koopman}{KOOPMAN}{2018b}
+{\underline{\ \ \ \ \ \ \ \ }. \textbf{Best CRCs}.
+[S.l.], 2018. Dispon{\'\i}vel em:
+  \url{http://users.ece.cmu.edu/~koopman/crc/index.html}. Acesso em: 24 jan
+  2018.}
+
+\bibitem[Koopman e Chakravarty 2004]{Tridib2004}
+\abntrefinfo{Koopman e Chakravarty}{KOOPMAN; CHAKRAVARTY}{2004}
+{KOOPMAN, P.; CHAKRAVARTY, T. \textbf{Cyclic Redundancy Code CRC Polynomial
+  Selection For Embedded Networks}. Florences: International Conference on
+  Dependable Systems and Network, 2004. 11~p.
+Dispon{\'\i}vel em:
+  \url{http://users.ece.cmu.edu/~koopman/roses/dsn04/koopman04\_crc\_poly\_embedded.pdf}.
+  Acesso em: 20 jan. 2018.}
+
+\bibitem[Machado 2018]{Renato2018}
+\abntrefinfo{Machado}{MACHADO}{2018}
+{MACHADO, R. \textbf{Problemas de Transmissão}. Santa Maria: UFSM, 2018. 11~p.
+Dispon{\'\i}vel em:
+  \url{http://coral.ufsm.br/gpscom/professores/Renato\%20Machado/comunicacaodedados.html}.
+  Acesso em: 20 jan. 2018.}
+
+\bibitem[Moreno 2010]{Robson2010}
+\abntrefinfo{Moreno}{MORENO}{2010}
+{MORENO, R.~L.
+\textbf{Implementação em FPGA de uma Arquitetura Reed-Solomon para Uso em
+  Comunicações Ópticas}.
+2010. 68~p. Disserta\c{c}\~{a}o (Mestrado em Automação e Sistemas Elétricos
+  Industriais) --- UNIVERSIDADE FEDERAL DE ITAJUBÁ, UNIFEI, Itajubá - MG,
+  2010.}
+
+\bibitem[RANDALL 2013]{Randal2013}
+\abntrefinfo{RANDALL}{RANDALL}{2013}
+{RANDALL, L. \textbf{BATENDO À PORTA DO CÉU: O BÓSON DE HIGGS E COMO A
+  FÍSICA MODERNA ILUMINA O UNIVERSO}. São Paulo: Companhia das Letras, 2013.
+  576~p.}
+
+\bibitem[Silva 2011]{Daniel2011}
+\abntrefinfo{Silva}{SILVA}{2011}
+{SILVA, D. C.~C. e.
+\textbf{Estudo da Codificação de Rede e Análise do seu Desempenho com Fonte
+  de Tráfego HTTP}.
+2011. 98~p. Disserta\c{c}\~{a}o (Mestrado em Telecomunicações) --- Instituto
+  Nacional de Telecomunicações, INATEL, Santa Rita do Sapucaí - MG, 2011.}
+
+\bibitem[SPRACE 2018]{Sprace2018}
+\abntrefinfo{SPRACE}{SPRACE}{2018}
+{SPRACE. \textbf{Sprace research group}. São Paulo: [s.n.], 2018.
+Dispon{\'\i}vel em: \url{http://sprace.org.br}. Acesso em: 20 jan. 2018.}
+
+\bibitem[TSESMELIS 2018]{Emanuel2018}
+\abntrefinfo{TSESMELIS}{TSESMELIS}{2018}
+{TSESMELIS, E. \textbf{THE COMPACT MUON SOLENOID (CMS) EXPERIMENT: THE LHC FOR
+  HIGH ENERGY AND LUMINOSITY}. 2018.
+Dispon{\'\i}vel em:
+  \url{http://www.desy.de/~garutti/LECTURES/ParticleDetectorSS12/JournalClub/lhc-CMS.pdf}.
+  Acesso em: 20 jan. 2018.}
+
+\bibitem[WIKIPÉDIA 2018]{Wikipedia2018}
+\abntrefinfo{WIKIPÉDIA}{WIKIPÉDIA}{2018}
+{WIKIPÉDIA. \textbf{GRANDE COLISOR DE HÁDRONS}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://pt.wikipedia.org/wiki/Grande\_Colisor\_de\_Hádrons}. Acesso em:
+  20 jan. 2018.}
+
+\end{thebibliography}

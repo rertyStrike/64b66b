@@ -1,0 +1,306 @@
+%% USPSC-Apendice.tex
+% ---
+% Inicia os apêndices
+% ---
+
+\begin{apendicesenv}
+% Imprime uma página indicando o início dos apêndices
+\partapendices
+\chapter{Encoder 64b66b (74 bits com o CRC)} \label{enc:64b}
+
+\begin{lstlisting}
+function [OUT_enc_74b,IN_esc_74b] = encoding64b66b(IN\_enc\_64b)
+
+% -------"CODIFICADOR 64B/66B - VICTOR AFONSO DOS REIS - FEIS UNESP"-------
+
+% -----Entradas e saídas---------------------
+%IN_64b:[X0 X1 X2 ... X62 X63 X64]
+%OUT_enc_74b: [Y1 Y2 Y3 ... Y72 Y73 Y74]
+%OUT_2b: [Y0 Y1]
+
+% Variáveis
+persistent reg_scrambler;
+OUT_enc_2b = zeros(1,2);
+IN_esc_74b = zeros(1,74);
+%% TRATAMENTO DA ENTRADA
+%CRC
+valCRC = 0;
+msgIn = [zeros(1,8) IN_enc_64b]; % Adiciona 8 zeros no início do dado
+regCRCenc = ones(1,8);
+
+%% Inicialização das saídas
+enc\_2b = dec2bin(1,2); % Seta para '01' pois só sera transmitido dado
+inLength = length(enc_2b);
+for i = 1:inLength
+if strcmp(enc_2b(i),'0')
+OUT_enc_2b(i) = 0;
+else
+OUT_enc_2b(i) = 1;
+end
+end
+
+%CRC
+OUT_line_72b = randi([0 0],1,72);
+
+%% CRC - Polinômio G(x) = x^8 + x^2 + x + 1
+lenCRC = length(msgIn);
+for j = lenCRC:-1:1
+valCRC = regCRCenc(8);
+regCRCenc = circshift(regCRCenc,[0 1]);
+regCRCenc(3) = bitxor(regCRCenc(3),valCRC);
+regCRCenc(2) = bitxor(regCRCenc(2),valCRC);
+regCRCenc(1) = bitxor(valCRC,msgIn(j));
+end
+finalXOR = ones(1,8);
+regxor = bitxor(regCRCenc,finalXOR);
+
+OUT_line_72b = [IN_enc_64b regxor];
+IN_esc_74b = [OUT_enc_2b OUT_line_72b];
+%% Scrambler - Polinômio G(x) = x^58 + x^39 + 1
+if isempty(reg_scrambler)
+reg_scrambler = ones(1,58);
+end
+val = zeros(1,72);
+v = randi([0 0],1,1);
+for j = 1:72
+v = bitxor(reg_scrambler(58),reg_scrambler(39));
+v = bitxor(v, OUT_line_72b(j));
+reg_scrambler = circshift(reg_scrambler, [0 1]);
+reg_scrambler(1) = v;
+val(j) = v;
+end
+
+OUT_enc_74b = [OUT_enc_2b val];
+end
+\end{lstlisting}
+    
+
+
+% ----------------------------------------------------------
+\chapter{Decoder 64b66b (74 bits com o CRC)} \label{dec:64b}
+\begin{lstlisting}
+function [OUT_dec_64b,error_sig,OUT_des_74b] = decoding66b64b(IN_des_74b)
+
+% ------"DECOFICADOR 64B/66B - VICTOR AFONSO DOS REIS - FEIS UNESP"--------
+
+%-----Entradas e saídas---------------------
+%IN_des_74b:[X1 X2 X3 ... X72 X73 X74]
+%OUT_dec_64b: [Y1 Y2 Y3 ... Y62 Y63 Y64]
+%error_sig: [Y1]
+%OUT_des_74b: [Y1 Y2 Y3 ... Y72 Y73 Y74] Presente só para verificação de
+%erros
+
+%% Variáveis
+persistent reg_descrambler;
+OUT_dec_64b = randi([0 0],1,64);
+OUT_des_74b = randi([0 0],1,74);
+%CRC
+OUT_crcDec_2b = randi([0 0],1,2);
+regCRCdec= ones(1,8);
+valCRC2 = 0;
+CRC_word = randi([0 0],1,8);
+
+%% Tratamento da Entrada
+
+IN_des_72b = zeros(1,72);
+for i = 1:74
+if (i < 3)
+OUT_crcDec_2b(i) = IN_des_74b(i);
+else
+IN_des_72b(i-2) = IN_des_74b(i);
+end
+end
+
+%% Scrambler - Polinômio G(x) = x^58 + x^39 + 1
+if isempty(reg_descrambler)
+reg_descrambler = ones(1,58); % Estado inicial dos registradores
+end
+out = zeros(1,72);
+v2 = zeros(1,1);
+for j = 1:72
+v2 = bitxor(reg_descrambler(58),reg_descrambler(39));
+v2 = bitxor(v2, IN_des_72b(j));
+reg_descrambler = circshift(reg_descrambler, [0 1]);
+reg_descrambler(1) = IN_des_72b(j);
+out(j) = v2;
+end
+
+OUT_des_72b = out;
+OUT_des_74b = [OUT_crcDec_2b out];
+
+%% CRC - Polinômio G(x) = x^8 + x^2 + x + 1
+
+for i = 1:72
+if (i < 65)
+OUT_dec_64b(i) = OUT_des_72b(i);
+elseif (i > 64)
+CRC_word(i-64) = OUT_des_72b(i);
+end
+end
+
+CRC_detect = [CRC_word OUT_dec_64b];
+
+
+lenCRC = length(CRC_detect);
+for j = lenCRC:-1:1
+valCRC2 = regCRCdec(8);
+regCRCdec = circshift(regCRCdec,[0 1]);
+regCRCdec(3) = bitxor(regCRCdec(3),valCRC2);
+regCRCdec(2) = bitxor(regCRCdec(2),valCRC2);
+regCRCdec(1) = bitxor(valCRC2,CRC_detect(j));
+end
+finalXOR2 = ones(1,8);
+regCRCdec = bitxor(regCRCdec,finalXOR2);
+
+error_crc = 0;
+lenreg = length(regCRCdec);
+for i =1:lenreg
+if (regCRCdec(i) == 1)
+error_crc = 1;
+end
+end
+
+if ((OUT_crcDec_2b(1) == 0) && (OUT_crcDec_2b(2) == 1) && (error_crc == 0))
+error_sig = randi([0 0],1,1);
+else
+error_sig = randi([1 1],1,1);
+end
+
+end
+\end{lstlisting}
+
+% ----------------------------------------------------------
+\chapter{Função de inserção de erro no canal (bitXor)}
+\begin{lstlisting}
+function [port_select,output_74b_error] = bitXor(insert_error_74b,bit_error)
+%% Inicialização do vetor que irá armazenar a posição do erro
+xorOp = randi([0 0],1,74);
+
+%% Inserção do erro ou não no vetor
+if strcmp(dec2bin(bit_error,1),'0')
+port_select = 1;
+else
+port_select = 2;
+xorOp(bit_error)= 1;
+end
+
+%% Seta saída 
+output_74b_error = bitxor(insert_error_74b,xorOp);
+end
+\end{lstlisting}
+
+
+% ----------------------------------------------------------
+\chapter{Função para contar os sinais de erro do Decoder (errorCont)}
+
+\begin{lstlisting}
+function cont_erro = errorCont(Error_out)
+%% Variáveis
+persistent error_countDec;
+%% Inicialização do contador
+if isempty(error_countDec)
+error_countDec = 0;
+end
+%% Detecção do Erro
+if (Error_out ~= 0)
+error_countDec = error_countDec + 1;
+end
+%% Incremento no contador
+cont_erro = error_countDec;
+end
+\end{lstlisting}
+
+
+% ----------------------------------------------------------
+\chapter{Função para detectar e contar erro nos dados de entrada e saída de 64 bits (dataCheck)}
+\begin{lstlisting}
+function number_errors= dataCheck(dec_in64b,enc_in64b )
+%% Variáveis
+persistent error_data
+
+%% Inicialização do contador de erros
+if isempty(error_data)
+error_data = 0;
+end
+
+%% Detecção do Erro
+error_cont = 0;
+for i = 1:64
+if (dec_in64b(i) ~= enc_in64b(i))
+error_cont = error_cont + 1;
+end
+end
+
+%% Incremento do contador
+if (error_cont ~= 0)
+error_data = error_data + 1;
+end
+
+%% Fornecendo o número de erros na saída
+number_errors = error_data;
+end
+\end{lstlisting}
+% ----------------------------------------------------------
+\chapter{Função para verificar e contar os erros inseridos no canal de transmissão (errorContPort)}
+\begin{lstlisting}
+function cont_erroport = errorContPort(portIn)
+%% Variáveis
+persistent error_count;
+
+%% Inicialiazação do Contador
+if isempty(error_count)
+error_count= 0;
+end
+%% Verificação do Erro
+if (portIn == 2)
+error_count = error_count + 1;
+end
+
+%% Externalizando o número de erros
+cont_erroport = error_count;
+end
+\end{lstlisting}
+
+% ----------------------------------------------------------
+\chapter{Função para verificar e contar os erros entre o dado de entrada do scrambler e saída do descrambler (checkOutDes74b)}
+\begin{lstlisting}
+function number_errors = checkOutDes74b(enc_in74b,dec_in74b)
+%% Variáveis
+persistent error_data
+
+%% Inicialização do contador de erro.
+if isempty(error_data)
+error_data = 0;
+end
+
+%% Detecção do Erro
+error_cont = 0;
+for i = 1:74
+if (dec_in74b(i) ~= enc_in74b(i))
+error_cont = error_cont + 1;
+end
+end
+
+%% Incremento no contador
+if (error_cont ~= 0)
+error_data = error_data + 1;
+end
+
+%% Fornece o número de erros para a saída
+number_errors = error_data;
+end
+\end{lstlisting}
+
+% ----------------------------------------------------------
+\chapter{Gerador de dados de 64 bits para a entrada do sistema (RandomBinary)}
+\begin{lstlisting}
+function OUT_64b = RandomBinary
+%#codegen
+
+OUT_64b = randi([0 1],1,64);
+
+end
+\end{lstlisting}
+
+\end{apendicesenv}
+% ---

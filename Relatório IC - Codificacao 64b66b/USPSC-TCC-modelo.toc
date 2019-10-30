@@ -1,0 +1,89 @@
+\changetocdepth {4}
+\select@language {brazil}
+\select@language {brazil}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}TRABALHO DESENVOLVIDO}{9}{section.1.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Campos Finitos (Finite Fields)}}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Propriedades do Campo de Galois}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Polin\IeC {\^o}mios Primitivos}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Constru\IeC {\c c}\IeC {\~a}o dos Campos de Galois}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}Opera\IeC {\c c}\IeC {\~o}es nos Campos de Galois}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Adi\IeC {\c c}\IeC {\~a}o e Subtra\IeC {\c c}\IeC {\~a}o}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Multiplica\IeC {\c c}\IeC {\~a}o e Divis\IeC {\~a}o}{13}{subsection.2.4.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Linear Feedback Shift Registers}}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Fibonacci Linear Feedback Shift Registers}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Galois Linear Feedback Shift Registers}{18}{section.3.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Scramblers}}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}\textit {Scramblers} Aditivos (Synchronous)}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}\textit {Scramblers} Multiplicativos (Self-Synchronizing)}{21}{section.4.2}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {CRC}}{24}{chapter.5}
+\contentsline {section}{\numberline {5.1}Codifica\IeC {\c c}\IeC {\~a}o do Dado}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2}Decodifica\IeC {\c c}\IeC {\~a}o do Dado}{26}{section.5.2}
+\contentsline {section}{\numberline {5.3}Sele\IeC {\c c}\IeC {\~a}o de Polin\IeC {\^o}mios Geradores}{26}{section.5.3}
+\contentsline {section}{\numberline {5.4}Implementa\IeC {\c c}\IeC {\~a}o em Hardware}{28}{section.5.4}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {A codifica\IeC {\c c}\IeC {\~a}o 64b/66b}}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conven\IeC {\c c}\IeC {\~o}es de Nota\IeC {\c c}\IeC {\~a}o}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Estrutura do Bloco}{29}{section.6.2}
+\contentsline {section}{\numberline {6.3}C\IeC {\'o}digos de Controle}{31}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Idle (/I/)}{32}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Start (/S/)}{33}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Teminate (/T/)}{33}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Ordered\_set (/O/)}{33}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Error (/E/)}{33}{subsection.6.3.5}
+\contentsline {section}{\numberline {6.4}Ordered\_sets}{34}{section.6.4}
+\contentsline {section}{\numberline {6.5}Blocos v\IeC {\'a}lidos e inv\IeC {\'a}lidos}{34}{section.6.5}
+\contentsline {section}{\numberline {6.6}Scrambler}{34}{section.6.6}
+\contentsline {section}{\numberline {6.7}CRC-8 bits}{36}{section.6.7}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {SIMULINK}}{38}{chapter.7}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase {RESULTADOS E CONCLUS\IeC {\~O}ES FINAIS}}{44}{chapter.8}
+\vspace {\cftbeforechapterskip }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{50}{section*.5}
+\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
+\setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
+\cftinsert {A}
+\contentsline {part}{\uppercase {Ap\^endices}}{52}{section*.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Encoder 64b66b (74 bits com o CRC)}}{53}{appendix.A}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Decoder 64b66b (74 bits com o CRC)}}{55}{appendix.B}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase {Fun\IeC {\c c}\IeC {\~a}o de inser\IeC {\c c}\IeC {\~a}o de erro no canal (bitXor)}}{58}{appendix.C}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase {Fun\IeC {\c c}\IeC {\~a}o para contar os sinais de erro do Decoder (errorCont)}}{59}{appendix.D}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase {Fun\IeC {\c c}\IeC {\~a}o para detectar e contar erro nos dados de entrada e sa\IeC {\'\i }da de 64 bits (dataCheck)}}{60}{appendix.E}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {F}\MakeTextUppercase {Fun\IeC {\c c}\IeC {\~a}o para verificar e contar os erros inseridos no canal de transmiss\IeC {\~a}o (errorContPort)}}{61}{appendix.F}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {G}\MakeTextUppercase {Fun\IeC {\c c}\IeC {\~a}o para verificar e contar os erros entre o dado de entrada do scrambler e sa\IeC {\'\i }da do descrambler (checkOutDes74b)}}{62}{appendix.G}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {H}\MakeTextUppercase {Gerador de dados de 64 bits para a entrada do sistema (RandomBinary)}}{63}{appendix.H}

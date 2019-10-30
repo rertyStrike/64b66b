@@ -1,0 +1,584 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  12 AUG 2017 00:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**DINCON_Victor_LaTeX_v2.tex
+(./DINCON_Victor_LaTeX_v2.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(./reportN.cls
+
+LaTeX Warning: You have requested document class `reportN',
+               but the document class provides `report'.
+
+Document Class: report 
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks14
+\thm@bodyfont=\toks15
+\thm@headfont=\toks16
+\thm@notefont=\toks17
+\thm@headpunct=\toks18
+\thm@preskip=\skip43
+\thm@postskip=\skip44
+\thm@headsep=\skip45
+\dth@everypar=\toks19
+)
+\c@theorem=\count87
+\c@lemma=\count88
+\c@proposition=\count89
+\c@definition=\count90
+\c@remark=\count91
+\c@corollary=\count92
+\c@teorema=\count93
+\c@lema=\count94
+\c@prop=\count95
+\c@defi=\count96
+\c@obs=\count97
+\c@cor=\count98
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
+\babel@savecnt=\count99
+\U@D=\dimen103
+)
+\l@brazil = a dialect from \language\l@portuges 
+Package babel Info: Making " an active character on input line 145.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks20
+\inpenc@posthook=\toks21
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count100
+))
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen104
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen105
+\subfiglabelskip=\skip49
+\c@subfigure=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@lotdepth=\count104
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen108
+\epsfysize=\dimen109
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen110
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen111
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count105
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count106
+\leftroot@=\count107
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count108
+\DOTSCASE@=\count109
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen112
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
+\dotsspace@=\muskip10
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
+\tag@help=\toks24
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
+\andhelp@=\toks25
+\eqnshift@=\dimen113
+\alignsep@=\dimen114
+\tagshift@=\dimen115
+\tagwidth@=\dimen116
+\totwidth@=\dimen117
+\lineht@=\dimen118
+\@envbody=\toks26
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/newlfont.sty
+Package: newlfont 1998/08/17 v2.2m Standard LaTeX package
+LaTeX Info: Redefining \em on input line 72.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count117
+\LTcapwidth=\dimen119
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count118
+\LT@rows=\count119
+\c@LT@tables=\count120
+\c@LT@chunks=\count121
+\LT@p@ftn=\toks28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen120
+\extrarowheight=\dimen121
+\NC@list=\toks29
+\extratabsurround=\skip59
+\backup@length=\skip60
+)
+\everycr=\toks30
+\minrowclearance=\skip61
+)
+\rownum=\count122
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2007/01/21 v2.11 Predefined colors according to SVG 1.1 (UK)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(./DINCON_Victor_LaTeX_v2.aux)
+\openout1 = `DINCON_Victor_LaTeX_v2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count123
+\scratchdimen=\dimen122
+\scratchbox=\box32
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen123
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks32
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 44.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Overfull \hbox (8.6678pt too wide) in paragraph at lines 51--52
+[]\OT1/cmr/bx/n/10 Resumo\OT1/cmr/m/n/10 . Em co-mu-nica^^Xc~oes de al-tas freq
+u^encias, onde a con-fi-a-bi-li-dade ^^Se re-le-vante, recomenda-
+ []
+
+Package epstopdf Info: Source file: <model_communication_system.eps>
+(epstopdf)                    date: 2017-08-04 13:54:30
+(epstopdf)                    size: 1599423 bytes
+(epstopdf)             Output file: <model_communication_system-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-08-04 13:55:21
+(epstopdf)                    size: 30003 bytes
+(epstopdf)             Command: <repstopdf --outfile=model_communication_system
+-eps-converted-to.pdf model_communication_system.eps>
+(epstopdf)             \includegraphics on input line 64.
+Package epstopdf Info: Output file is already uptodate.
+
+<model_communication_system-eps-converted-to.pdf, id=1, 895.345pt x 295.1025pt>
+File: model_communication_system-eps-converted-to.pdf Graphic file (type pdf)
+<use model_communication_system-eps-converted-to.pdf>
+Package pdftex.def Info: model_communication_system-eps-converted-to.pdf used o
+n input line 64.
+(pdftex.def)             Requested size: 398.33847pt x 85.35687pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<logodincon80.png, id=2, 73.27374pt x 80.3pt>
+File: logodincon80.png Graphic file (type png)
+ <use logodincon80.png>
+Package pdftex.def Info: logodincon80.png used on input line 72.
+(pdftex.def)             Requested size: 43.96457pt x 48.18036pt.
+
+Overfull \hbox (3.74608pt too wide) has occurred while \output is active
+[][] []
+ []
+
+
+Overfull \hbox (2.43333pt too wide) has occurred while \output is active
+$[]$ 
+ []
+
+
+Overfull \vbox (17.6677pt too high) has occurred while \output is active []
+
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+ <./logodincon80.png>]
+
+LaTeX Warning: Citation `Semiconductor' on page 2 undefined on input line 82.
+
+[2 <./model_communication_system-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <esquema_rd.eps>
+(epstopdf)                    date: 2017-08-09 03:35:39
+(epstopdf)                    size: 2806994 bytes
+(epstopdf)             Output file: <esquema_rd-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-08-09 04:03:46
+(epstopdf)                    size: 62673 bytes
+(epstopdf)             Command: <repstopdf --outfile=esquema_rd-eps-converted-t
+o.pdf esquema_rd.eps>
+(epstopdf)             \includegraphics on input line 90.
+Package epstopdf Info: Output file is already uptodate.
+
+<esquema_rd-eps-converted-to.pdf, id=25, 1145.27875pt x 405.515pt>
+File: esquema_rd-eps-converted-to.pdf Graphic file (type pdf)
+
+<use esquema_rd-eps-converted-to.pdf>
+Package pdftex.def Info: esquema_rd-eps-converted-to.pdf used on input line 90.
+
+(pdftex.def)             Requested size: 341.43678pt x 99.58408pt.
+
+
+LaTeX Warning: Citation `Semiconductor' on page 3 undefined on input line 95.
+
+Package epstopdf Info: Source file: <coding.eps>
+(epstopdf)                    date: 2017-08-09 03:39:45
+(epstopdf)                    size: 807550 bytes
+(epstopdf)             Output file: <coding-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-08-09 04:03:47
+(epstopdf)                    size: 11902 bytes
+(epstopdf)             Command: <repstopdf --outfile=coding-eps-converted-to.pd
+f coding.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+<coding-eps-converted-to.pdf, id=26, 428.60126pt x 310.15875pt>
+File: coding-eps-converted-to.pdf Graphic file (type pdf)
+
+<use coding-eps-converted-to.pdf>
+Package pdftex.def Info: coding-eps-converted-to.pdf used on input line 99.
+(pdftex.def)             Requested size: 227.62192pt x 113.81041pt.
+ [3 <./esquema_rd-eps-converted-to.pdf> <./coding-eps-converted-to.pdf>]
+Overfull \hbox (5.14507pt too wide) in paragraph at lines 107--107
+[]\OT1/cmr/bx/n/14.4 Descri^^Xc~ao e Mo-de-la-gem em M^^Saquinas de Es-tado em 
+VHDL
+ []
+
+Package epstopdf Info: Source file: <FSM8b10b_left.eps>
+(epstopdf)                    date: 2017-08-10 17:34:27
+(epstopdf)                    size: 22313731 bytes
+(epstopdf)             Output file: <FSM8b10b_left-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-08-10 21:36:26
+(epstopdf)                    size: 397891 bytes
+(epstopdf)             Command: <repstopdf --outfile=FSM8b10b_left-eps-converte
+d-to.pdf FSM8b10b_left.eps>
+(epstopdf)             \includegraphics on input line 115.
+Package epstopdf Info: Output file is already uptodate.
+<FSM8b10b_left-eps-converted-to.pdf, id=36, 3430.8175pt x 1078.0275pt>
+File: FSM8b10b_left-eps-converted-to.pdf Graphic file (type pdf)
+
+<use FSM8b10b_left-eps-converted-to.pdf>
+Package pdftex.def Info: FSM8b10b_left-eps-converted-to.pdf used on input line 
+115.
+(pdftex.def)             Requested size: 426.75714pt x 142.25401pt.
+Package epstopdf Info: Source file: <hardware_system.eps>
+(epstopdf)                    date: 2017-08-10 15:50:57
+(epstopdf)                    size: 19324342 bytes
+(epstopdf)             Output file: <hardware_system-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-08-10 22:58:50
+(epstopdf)                    size: 253137 bytes
+(epstopdf)             Command: <repstopdf --outfile=hardware_system-eps-conver
+ted-to.pdf hardware_system.eps>
+(epstopdf)             \includegraphics on input line 128.
+Package epstopdf Info: Output file is already uptodate.
+
+<hardware_system-eps-converted-to.pdf, id=37, 3030.32124pt x 1056.94875pt>
+File: hardware_system-eps-converted-to.pdf Graphic file (type pdf)
+
+<use hardware_system-eps-converted-to.pdf>
+Package pdftex.def Info: hardware_system-eps-converted-to.pdf used on input lin
+e 128.
+(pdftex.def)             Requested size: 412.54364pt x 113.79718pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./FSM8b10b_left-eps-converted-to.pdf>] [5 <./hardware_system-eps-converted-
+to.pdf>]
+Package epstopdf Info: Source file: <error_identified.eps>
+(epstopdf)                    date: 2017-08-11 03:22:56
+(epstopdf)                    size: 2003116 bytes
+(epstopdf)             Output file: <error_identified-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-08-11 03:24:49
+(epstopdf)                    size: 32671 bytes
+(epstopdf)             Command: <repstopdf --outfile=error_identified-eps-conve
+rted-to.pdf error_identified.eps>
+(epstopdf)             \includegraphics on input line 147.
+Package epstopdf Info: Output file is already uptodate.
+
+<error_identified-eps-converted-to.pdf, id=51, 916.42375pt x 361.35pt>
+File: error_identified-eps-converted-to.pdf Graphic file (type pdf)
+
+<use error_identified-eps-converted-to.pdf>
+Package pdftex.def Info: error_identified-eps-converted-to.pdf used on input li
+ne 147.
+(pdftex.def)             Requested size: 412.56866pt x 85.35835pt.
+Package epstopdf Info: Source file: <error_notidentified.eps>
+(epstopdf)                    date: 2017-08-11 04:00:42
+(epstopdf)                    size: 1944762 bytes
+(epstopdf)             Output file: <error_notidentified-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-08-11 04:06:18
+(epstopdf)                    size: 31803 bytes
+(epstopdf)             Command: <repstopdf --outfile=error_notidentified-eps-co
+nverted-to.pdf error_notidentified.eps>
+(epstopdf)             \includegraphics on input line 156.
+Package epstopdf Info: Output file is already uptodate.
+
+<error_notidentified-eps-converted-to.pdf, id=52, 882.29625pt x 364.36125pt>
+File: error_notidentified-eps-converted-to.pdf Graphic file (type pdf)
+
+<use error_notidentified-eps-converted-to.pdf>
+Package pdftex.def Info: error_notidentified-eps-converted-to.pdf used on input
+ line 156.
+(pdftex.def)             Requested size: 412.56564pt x 85.35803pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./error_identified-eps-converted-to.pdf> <./error_notidentified-eps-conver
+ted-to.pdf>] [7] (./DINCON_Victor_LaTeX_v2.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4347 strings out of 493029
+ 57538 string characters out of 6136234
+ 140667 words of memory out of 5000000
+ 7756 multiletter control sequences out of 15000+600000
+ 16014 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,19n,35p,967b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
+pfb>
+Output written on DINCON_Victor_LaTeX_v2.pdf (7 pages, 975224 bytes).
+PDF statistics:
+ 103 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+
